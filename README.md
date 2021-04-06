@@ -1,6 +1,6 @@
 # Etch-a-Sketch App
 
-Project to create a **Etch-a-Sketch** of sorts using only HTML, CSS and JS.
+Project to create an **Etch-a-Sketch** of sorts using only HTML, CSS and JS.
 Project will follow basic Git workflow.
 
 🔗 **Live preview:** [here](#)
