@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black: #000000;
+    --random-color: ;
+    --user-color: ;
+    --grid-size: 20;
+}
+
+html{
+    font-size: 16px;
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container{
+    height: 75vw;
+    width: 75vw;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 2rem auto;
+}
+
+.main-grid{
+    background: lightgrey;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+}
+
+.main-grid .gridDiv{
+    border: 1px solid black;
+}
+
+.main-grid .gridDiv.black{
+    background: var(--black);
+}
+
