@@ -10,19 +10,32 @@
 </head>
 
 <body>
+    <header>
+        <h1>Etch-a-Sketch</h1>
+    </header>
 
     <div class="main-container">
-        <div class="controls-container">
-            <label for="grid-size">Grid Size</label>
-            <input type="range" id="grid-size" name="grid-size" min="10" max="50" value="25" data-sizing="px">
 
-            <button class="pen black">Black</button>
-            <button class="pen colorful">Colorful</button>
-
-            <label for="user-color">Select Color</label>
-            <input class="pen user-color" type="color" id="user-color" name="user-color" value="#FFD857">
-        </div>
         <div class="main-grid"></div>
+
+        <div class="controls-container">
+            <div class="grid-size-container">
+                <label for="grid-size">Grid Size</label>
+                <input class="grid-range-input" type="range" id="grid-size" name="grid-size" min="10" max="50"
+                    value="25" data-sizing="px">
+                <span class="grid-size-display"></span>
+            </div>
+
+            <div class="pen-container">
+                <button class="btn pen black">Black</button>
+                <button class="btn pen colorful">Colorful</button>
+                <input class="btn pen user-color" type="color" id="user-color" name="user-color" value="#3D405B">
+                <button class="btn reset">Reset</button>
+            </div>
+        </div>
+
+
+
     </div>
 
     <script src="app.js"></script>

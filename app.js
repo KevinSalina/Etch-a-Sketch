@@ -3,16 +3,23 @@ const mainGrid = document.querySelector('.main-grid');
 const rangeInput = document.querySelector('input[type=range]')
 const penButtons = document.querySelectorAll('.pen')
 const userColorInput = document.querySelector('.user-color')
+const resetBtn = document.querySelector('.reset')
+let gridSizeDisplay = document.querySelector('.grid-size-display')
 let gridElements = mainGrid.querySelectorAll('.gridDiv')
 
 let currentPenMode = 'black'
 let currentUserColor = ''
+let currentGridSize = ''
+gridSizeDisplay.textContent = `${rangeInput.value} x ${rangeInput.value}`
+
+console.log(gridSizeDisplay)
 
 
 // ---Main Game---
 // Set Initial Grid
 document.addEventListener("DOMContentLoaded", function(){
     createGridElements()
+    clearGrid()
     sketch()
 })
 
@@ -48,6 +55,7 @@ userColorInput.addEventListener('change', newUserColor)
 
 // Listen for Change of Grid Size
 rangeInput.addEventListener('change', updateGridSize)
+rangeInput.addEventListener('mousemove', updateGridSizeDisplay)
 
 // ---Functions---
 // -Grid Functions-
@@ -75,6 +83,10 @@ function createGridElements(gridSize){
 function updateGridSize(){
     document.documentElement.style.setProperty(`--${this.name}`, this.value)
     updateGrid(this)
+}
+
+function updateGridSizeDisplay(){
+    gridSizeDisplay.textContent = `${rangeInput.value} x ${rangeInput.value}`
 }
 
 // -Pen Functions-
@@ -117,3 +129,11 @@ function resetGrid(){
         mainGrid.removeChild(gridElements[i])
     }
 }
+
+function clearGrid(){
+    gridElements.forEach(grid =>{
+        grid.style.background = '#F3F3F7'
+    })
+}
+
+resetBtn.addEventListener('click', clearGrid)
