@@ -3,7 +3,7 @@
 Project to create an **Etch-a-Sketch** of sorts using only HTML, CSS and JS.
 Project will follow basic Git workflow.
 
-🔗 **Live preview:** [here](#)
+🔗 **Live preview:** [here](https://kevinsalina.github.io/Etch-a-Sketch/)
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project).
 
