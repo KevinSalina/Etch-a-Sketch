@@ -51,3 +51,7 @@ body{
     background: var(--black);
 }
 
+.main-grid .gridDiv.userColor{
+    background: var(--user-color) ;
+}
+
